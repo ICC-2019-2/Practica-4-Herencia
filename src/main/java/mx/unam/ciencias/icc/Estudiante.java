@@ -119,11 +119,8 @@ public class Estudiante {
      *         <tt>false</tt> en otro caso.
      */
     public boolean equals(Estudiante estudiante) {
-        // Aquí va su código.
-        /*return (estudiante == null) ? false : 
-        nombre.equals(estudiante.nombre) ? true : 
-        cuenta==(estudiante.cuenta) ? true : 
-        promedio==(estudiante.promedio) ? true : false;*/
+        if (!(estudiante instanceof Estudiante))
+            return false;
         if (estudiante == null)
            return false;
         if (!this.nombre.equals(estudiante.nombre))
@@ -134,7 +131,6 @@ public class Estudiante {
            return false;
         if (this.edad != (estudiante.edad))
            return false;
-
         return true;
     }
 }
